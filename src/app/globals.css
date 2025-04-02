@@ -109,3 +109,13 @@ h3 {
     --chart-5: 340 75% 55%;
   }
 }
+
+@layer components {
+  .dotted-background {
+    background-color: #f4f4f5; /* zinc-100 as base */
+    background-image: radial-gradient(#d4d4d5 1px, transparent 1px),
+      /* zinc-200 dots */ radial-gradient(#c4c4c5 1px, transparent 1px);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+  }
+}
