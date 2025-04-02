@@ -10,7 +10,7 @@ export default function Hero() {
           </p>
         </div>
         <img
-          src="/images/michael.png"
+          src="/images/8bit.png"
           alt="Michael"
           className="w-36 h-36 bg-black rounded-full border-2 border-black"
         />

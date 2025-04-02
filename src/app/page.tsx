@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certification from "@/components/Certification";
 import Contact from "@/components/Contact";
+import FloatingBanner from "@/components/FloatingBanner";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -26,6 +27,7 @@ export default function Home() {
           <Projects />
           <Certification />
           <Contact />
+          <FloatingBanner />
         </div>
       </div>
     </>

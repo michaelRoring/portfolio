@@ -22,7 +22,7 @@ export default function Skills() {
         <div className="flex flex-wrap gap-2">
           {skillList.map((skill, index) => (
             <div className="" key={index}>
-              <Badge className="bg-zinc-300">{skill}</Badge>
+              <Badge className="bg-slate-700 text-white">{skill}</Badge>
             </div>
           ))}
         </div>
