@@ -1,3 +1,6 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
@@ -9,15 +12,23 @@ export default function Education() {
   const educationList = [
     {
       educatorName: "Hacktiv8",
-      content:
-        "I was a part of the first ever in-person cohort of buildspace called buildspace sf1. I helped build the first ever NFT marketplace on the blockchain, and was the lead developer on the first ever NFT marketplace on the blockchain. I also helped build the first ever NFT marketplace on the blockchain.",
+      title: "Immersive full stack javascript bootcamp",
+      grade: "87.6 / 100",
+      timeline: "Jan 2022 - Apr 2022",
+      certificateLink:
+        "https://drive.google.com/file/d/1GzV2Tu3T2mRbfuIHOnbB1ZduhDZOIbnk/view?usp=sharing",
     },
     {
-      educatorName: "Hacktiv8",
-      content:
-        "I was a part of the first ever in-person cohort of buildspace called buildspace sf1. I helped build the first ever NFT marketplace on the blockchain, and was the lead developer on the first ever NFT marketplace on the blockchain. I also helped build the first ever NFT marketplace on the blockchain.",
+      educatorName: "Bunda Mulia University",
+      title: "Information technology",
+      grade: "3.34 / 4.00",
+      timeline: "Jul 2010 - Jun 2014",
     },
   ];
+
+  const handleCertificateClick = (education: any) => {
+    window.open(education.certificateLink, "_blank");
+  };
 
   return (
     <>
@@ -35,10 +46,24 @@ export default function Education() {
                   className="lg:w-[500px] max-w-full "
                   value="item-1"
                 >
-                  <AccordionTrigger className="bg-zinc-200">
+                  <AccordionTrigger className="bg-zinc-200 hover:bg-blue-400">
                     {education.educatorName}
                   </AccordionTrigger>
-                  <AccordionContent>{education.content}</AccordionContent>
+                  <AccordionContent>
+                    <div className="grid grid-cols-1">
+                      <a className="font-bold">{education.title}</a>
+                      <a>Grade: {education.grade}</a>
+                      <a>{education.timeline}</a>
+                      {education?.certificateLink && (
+                        <Button
+                          className="bg-blue-400 mt-2"
+                          onClick={() => handleCertificateClick(education)}
+                        >
+                          See certificate
+                        </Button>
+                      )}
+                    </div>
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>

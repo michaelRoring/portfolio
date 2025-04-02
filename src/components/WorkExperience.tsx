@@ -10,7 +10,7 @@ export default function WorkExperience() {
     {
       companyName: "Devhaus pte. ltd.",
       position: "Mid level full stack web developer",
-      startDate: "Jul 2023",
+      startDate: "Jul 2022",
       endDate: "present",
       description: `- led and kickstarted "leader's hangar", the first new product in the company\n- built automation workflows for key account managers to spot potential leads and opportunities
       `,
@@ -55,7 +55,7 @@ export default function WorkExperience() {
                   className="lg:w-[500px] max-w-full"
                   value="item-1"
                 >
-                  <AccordionTrigger className="bg-zinc-300 hover:bg-zinc-400">
+                  <AccordionTrigger className="bg-zinc-300 hover:bg-yellow-400">
                     <div className="flex gap-3">
                       <a>{experience.companyName}</a>
                       <a>-</a>
@@ -63,10 +63,14 @@ export default function WorkExperience() {
                     </div>
                   </AccordionTrigger>
 
-                  <AccordionContent className=" font-bold">
-                    {experience.startDate} - {experience.endDate}
+                  <AccordionContent>
+                    <div className="grid grid-cols-1 gap-3">
+                      <a className="font-bold">
+                        {experience.startDate} - {experience.endDate}
+                      </a>
+                      <a>{experience.description}</a>
+                    </div>
                   </AccordionContent>
-                  <AccordionContent>{experience.description}</AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
