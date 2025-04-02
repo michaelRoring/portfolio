@@ -9,34 +9,33 @@ export default function WorkExperience() {
   const workExperience = [
     {
       companyName: "Devhaus pte. ltd.",
-      position: "Lead",
-      startDate: "2022",
-      endDate: "Present",
-      description:
-        'led and kickstarted "leader\'s hangar", the first new product in the company - built automation workflows for key account managers to spot potential leads and opportunities',
+      position: "Mid level full stack web developer",
+      startDate: "Jul 2023",
+      endDate: "present",
+      description: `- led and kickstarted "leader's hangar", the first new product in the company\n- built automation workflows for key account managers to spot potential leads and opportunities
+      `,
     },
     {
-      companyName: "Grahaprima Suksesutama",
-      position: "Lead",
-      startDate: "2021",
-      endDate: "2022",
-      description: `hello\nmalaya`,
+      companyName: "PT. Grahaprima Suksesutama",
+      position: "Marketing consultant",
+      startDate: "Feb 2020",
+      endDate: "Dec 2022",
+      description: `led, planned and taking initiatives to drive more traffic to the company's website's social media channels`,
     },
     {
       companyName: "Clairmont store",
-      position: "Lead",
-      startDate: "2020",
-      endDate: "2021",
-      description:
-        'led and kickstarted "leader\'s hangar", the first new product in the company - built automation workflows for key account managers to spot potential leads and opportunities',
+      position: "Owner/founder - Self-employed",
+      startDate: "Feb 2017",
+      endDate: "Jan 2020",
+      description: `- got one of the top seller on Lazada marketplace\n- reached almost 500 million rupiah revenue in single day at 12.12.18
+      `,
     },
     {
       companyName: "PT. Noboru Tirta Lestari",
-      position: "Lead",
-      startDate: "2019",
-      endDate: "2020",
-      description:
-        'led and kickstarted "leader\'s hangar", the first new product in the company - built automation workflows for key account managers to spot potential leads and opportunities',
+      position: "Head of marketing",
+      startDate: "Oct 2014",
+      endDate: "Jan 2017",
+      description: `- built relationships with key account manager of e-commerce companies\n- planned the strategies for the digital marketing campaigns`,
     },
   ];
 
@@ -44,11 +43,11 @@ export default function WorkExperience() {
     <>
       <div className="mt-6">
         <h1 className="text-xl font-bold mb-2">Work Experience</h1>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 ">
           {workExperience.map((experience, index) => (
             <div key={index}>
               <Accordion
-                className="w-full lg:w-[unset]"
+                className="w-full lg:w-[unset"
                 type="single"
                 collapsible
               >
@@ -56,7 +55,17 @@ export default function WorkExperience() {
                   className="lg:w-[500px] max-w-full"
                   value="item-1"
                 >
-                  <AccordionTrigger>{experience.companyName}</AccordionTrigger>
+                  <AccordionTrigger className="bg-zinc-300 hover:bg-zinc-400">
+                    <div className="flex gap-3">
+                      <a>{experience.companyName}</a>
+                      <a>-</a>
+                      <a className="font-light">{experience.position}</a>
+                    </div>
+                  </AccordionTrigger>
+
+                  <AccordionContent className=" font-bold">
+                    {experience.startDate} - {experience.endDate}
+                  </AccordionContent>
                   <AccordionContent>{experience.description}</AccordionContent>
                 </AccordionItem>
               </Accordion>

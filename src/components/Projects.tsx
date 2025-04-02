@@ -33,9 +33,9 @@ export default function Projects() {
     <>
       <div className="mt-6">
         <h1 className="text-xl font-bold mb-2">My projects</h1>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 ">
           {projectList.map((project, index) => (
-            <Card key={index}>
+            <Card key={index} className="bg-zinc-300">
               <CardHeader>
                 <CardTitle>{project.projectName}</CardTitle>
                 <Label>{project.tags.join(", ")}</Label>

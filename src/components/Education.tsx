@@ -23,19 +23,21 @@ export default function Education() {
     <>
       <div className="mt-6">
         <h1 className="text-xl font-bold mb-2">Education</h1>
-        <div className="grid grid-cols-1 gap-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
           {educationList.map((education, index) => (
             <div key={index}>
               <Accordion
-                className="w-full lg:w-[unset]"
+                className="w-full lg:w-[unset] "
                 type="single"
                 collapsible
               >
                 <AccordionItem
-                  className="lg:w-[500px] max-w-full"
+                  className="lg:w-[500px] max-w-full "
                   value="item-1"
                 >
-                  <AccordionTrigger>{education.educatorName}</AccordionTrigger>
+                  <AccordionTrigger className="bg-zinc-200">
+                    {education.educatorName}
+                  </AccordionTrigger>
                   <AccordionContent>{education.content}</AccordionContent>
                 </AccordionItem>
               </Accordion>

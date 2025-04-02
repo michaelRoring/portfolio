@@ -53,7 +53,7 @@ const AccordionContent = React.forwardRef<
     className="overflow-hidden rounded-b-base bg-white dark:bg-secondaryBlack text-sm font-base transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn("p-4", className)}>{children}</div>
+    <div className={cn("p-4 whitespace-pre-wrap", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ));
 

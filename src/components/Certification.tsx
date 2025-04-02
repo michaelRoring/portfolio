@@ -34,7 +34,7 @@ export default function Certification() {
         <div className="flex flex-wrap gap-2">
           {certificationList.map((certification, index) => (
             <div className="" key={index}>
-              <Card key={index} className="bg-yellow-200">
+              <Card key={index} className="bg-yellow-300">
                 <CardHeader>
                   <CardTitle>{certification.name}</CardTitle>
                   <Label>{certification.description}</Label>
