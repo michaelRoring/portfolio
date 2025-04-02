@@ -24,7 +24,7 @@ export default function Projects() {
     {
       projectName: "Singapore Workers Party Website",
       role: "Project manager",
-      stacks: ["Webflow"],
+      stacks: ["Webflow", "Webflow CMS", "Figma"],
       description:
         "spearheaded the web development of one of singapore's biggest party website as the project lead, guiding a dynamic team of 3 through a streamlined webflow-powered creation process. i managed to wrangle web design faster than a politician manages talking points - and with significantly less spin",
       link: "https://www.wp.sg/",
@@ -66,9 +66,12 @@ export default function Projects() {
                 <Label>{project.role}</Label>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-6 gap-2">
+                <div className="flex flex-wrap gap-2">
                   {project.stacks.map((stack, index) => (
-                    <Badge className="bg-zinc-100 mx-1  w-24" key={index}>
+                    <Badge
+                      className="bg-zinc-100 hover:bg-zinc-200"
+                      key={index}
+                    >
                       {stack}
                     </Badge>
                   ))}

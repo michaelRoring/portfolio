@@ -9,7 +9,7 @@ export default function WorkExperience() {
   const workExperience = [
     {
       companyName: "Devhaus pte. ltd.",
-      position: "Mid level full stack web developer",
+      position: "Full stack web developer",
       startDate: "Jul 2022",
       endDate: "present",
       description: `- led and kickstarted "leader's hangar", the first new product in the company\n- built automation workflows for key account managers to spot potential leads and opportunities

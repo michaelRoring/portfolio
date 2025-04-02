@@ -56,10 +56,10 @@ export default function Education() {
                       <a>{education.timeline}</a>
                       {education?.certificateLink && (
                         <Button
-                          className="bg-blue-400 mt-2"
+                          className="bg-white mt-2 hover:bg-blue-400"
                           onClick={() => handleCertificateClick(education)}
                         >
-                          See certificate
+                          View certificate
                         </Button>
                       )}
                     </div>

@@ -3,17 +3,19 @@ import { Badge } from "./ui/badge";
 
 export default function Skills() {
   const skillList = [
-    "react",
-    "rust",
-    "javascript",
-    "typescript",
-    "express",
-    "webflow",
-    "supabase",
-    "nodejs",
-    "langchain",
-    "tailwindcss",
-    "solidity",
+    "React",
+    "Rust",
+    "Javascript",
+    "Typescript",
+    "Express",
+    "Webflow",
+    "Supabase",
+    "Nodejs",
+    "Langchain",
+    "Tailwind",
+    "Solidity",
+    "Foundry",
+    "Substrate",
   ];
   return (
     <>
@@ -22,7 +24,9 @@ export default function Skills() {
         <div className="flex flex-wrap gap-2">
           {skillList.map((skill, index) => (
             <div className="" key={index}>
-              <Badge className="bg-slate-700 text-white">{skill}</Badge>
+              <Badge className="bg-zinc-100 cursor-pointer hover:bg-zinc-300 hover:ease">
+                {skill}
+              </Badge>
             </div>
           ))}
         </div>
