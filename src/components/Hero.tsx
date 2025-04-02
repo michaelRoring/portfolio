@@ -6,7 +6,7 @@ export default function Hero() {
           <h1 className="text-3xl font-bold">Hi, I'm Michael 👋</h1>
           <p className="mt-2">
             A marketer turned web developer. I love building things and helping
-            people. Currently active on building on the blockchain
+            people. Currently building on the blockchain
           </p>
         </div>
         <img

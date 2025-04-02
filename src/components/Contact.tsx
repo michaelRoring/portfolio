@@ -14,14 +14,12 @@ export default function Contact() {
   return (
     <>
       <div className="mt-6">
-        {/* <h1 className="text-xl font-bold mb-2">Contact</h1> */}
-        <Card className="bg-slate-50">
+        <Card className="bg-yellow-300 cursor-pointer hover:bg-yellow-400">
           <CardHeader>
-            <CardTitle>Get in touch</CardTitle>
-            <Label>Wadididaw</Label>
+            <CardTitle>Contact</CardTitle>
+            <Label>Get in touch</Label>
           </CardHeader>
           <CardContent>
-            {/* <CardDescription>{certification.description}</CardDescription> */}
             <CardDescription>
               Want to chat? Just shoot me a dm with a direct question on twitter
               and I'll respond whenever I can. I will ignore all soliciting.

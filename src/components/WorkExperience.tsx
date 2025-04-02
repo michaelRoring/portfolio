@@ -51,10 +51,7 @@ export default function WorkExperience() {
                 type="single"
                 collapsible
               >
-                <AccordionItem
-                  className="lg:w-[500px] max-w-full"
-                  value="item-1"
-                >
+                <AccordionItem className="lg:w-full max-w-full" value="item-1">
                   <AccordionTrigger className="bg-zinc-300 hover:bg-yellow-400">
                     <div className="flex gap-3">
                       <a>{experience.companyName}</a>

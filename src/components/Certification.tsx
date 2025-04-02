@@ -13,7 +13,7 @@ export default function Certification() {
   const certificationList = [
     {
       name: "Blockchain Introductory Bootcamp",
-      issuer: "Mandala Blokcchain Academy",
+      issuer: "Mandala Blokchain Academy",
       issueDate: "Mar 2025",
       description:
         "acquired the google project management certification, gaining profound insights into strategic planning and execution methodologies. discovered that scrum is basically like herding cats, but with more whiteboards and fewer scratches",
@@ -71,7 +71,7 @@ export default function Certification() {
     <>
       <div className="mt-6">
         <h1 className="text-xl font-bold mb-2">Certifications</h1>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3">
           {certificationList.map((certification, index) => (
             <div className="" key={index}>
               <Card

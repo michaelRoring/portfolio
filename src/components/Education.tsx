@@ -46,7 +46,7 @@ export default function Education() {
                   className="lg:w-[500px] max-w-full "
                   value="item-1"
                 >
-                  <AccordionTrigger className="bg-zinc-200 hover:bg-blue-400">
+                  <AccordionTrigger className="bg-zinc-200 hover:bg-blue-300">
                     {education.educatorName}
                   </AccordionTrigger>
                   <AccordionContent>
