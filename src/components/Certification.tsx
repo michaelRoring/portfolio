@@ -69,7 +69,7 @@ export default function Certification() {
 
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-12">
         <h1 className="text-xl font-bold mb-2">Certifications</h1>
         <div className="flex flex-wrap gap-3">
           {certificationList.map((certification, index) => (

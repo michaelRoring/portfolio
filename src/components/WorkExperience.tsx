@@ -24,7 +24,7 @@ export default function WorkExperience() {
     },
     {
       companyName: "Clairmont store",
-      position: "Owner/founder - Self-employed",
+      position: "Founder / Self-employed",
       startDate: "Feb 2017",
       endDate: "Jan 2020",
       description: `- got one of the top seller on Lazada marketplace\n- reached almost 500 million rupiah revenue in single day at 12.12.18
@@ -41,7 +41,7 @@ export default function WorkExperience() {
 
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-12">
         <h1 className="text-xl font-bold mb-2">Work Experience</h1>
         <div className="grid grid-cols-1 gap-3 ">
           {workExperience.map((experience, index) => (

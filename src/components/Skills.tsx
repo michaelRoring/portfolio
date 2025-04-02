@@ -19,7 +19,7 @@ export default function Skills() {
   ];
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-12">
         <h1 className="text-xl font-bold mb-2">Skills</h1>
         <div className="flex flex-wrap gap-2">
           {skillList.map((skill, index) => (

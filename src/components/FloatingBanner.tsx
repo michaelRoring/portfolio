@@ -27,9 +27,13 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { DiscordIcon } from "./ui/discord";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/hooks/use-toast";
 
 export default function FloatingBanner() {
   const router = useRouter();
+  const { toast } = useToast();
+
   const [data, setData] = useState({
     email: "",
     message: "",
@@ -74,6 +78,12 @@ export default function FloatingBanner() {
 
     if (response.ok) {
       console.log("Message sent successfully");
+
+      toast({
+        title: "Message Sent",
+        description: "Thanks for reaching out! I'll get back to you soon.",
+        action: <ToastAction altText="Close notification">Close</ToastAction>,
+      });
     }
   };
 

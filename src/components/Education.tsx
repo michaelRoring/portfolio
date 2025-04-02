@@ -32,7 +32,7 @@ export default function Education() {
 
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-12">
         <h1 className="text-xl font-bold mb-2">Education</h1>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
           {educationList.map((education, index) => (

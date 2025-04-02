@@ -13,7 +13,7 @@ import { LinkedinIcon } from "lucide-react";
 export default function Contact() {
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-24">
         <Card className="bg-yellow-300 cursor-pointer hover:bg-yellow-400">
           <CardHeader>
             <CardTitle>Contact</CardTitle>
@@ -21,16 +21,18 @@ export default function Contact() {
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Want to chat? Just shoot me a dm with a direct question on twitter
+              Want to chat? Just shoot me{" "}
+              <a
+                href="https://x.com/0xmchaelr"
+                target="_blank"
+                className="font-bold hover:underline"
+              >
+                a dm with a direct question on twitter
+              </a>{" "}
               and I'll respond whenever I can. I will ignore all soliciting.
             </CardDescription>
           </CardContent>
-          <CardFooter>
-            <Button variant="neutral">
-              <LinkedinIcon />
-              Linkedin
-            </Button>
-          </CardFooter>
+          <CardFooter></CardFooter>
         </Card>
       </div>
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${montserrat.variable} antialiased`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );

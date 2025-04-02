@@ -9,6 +9,13 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Badge } from "./ui/badge";
+import ImageCard from "@/components/ui/image-card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Projects() {
   const projectList = [
@@ -19,7 +26,7 @@ export default function Projects() {
       description:
         "led the full-stack development of leader's hangar as project lead, orchestrating a three-person team using next.js, supabase, and supabase auth to create a robust web application. i piloted this project like a software engineer pilots a drone - with precision, a touch of swagger, and hopefully fewer unexpected crashes!",
       link: "https://leaders-hangar.vercel.app",
-      image: "",
+      image: "https://i.postimg.cc/9XyRBSgT/leaders-hangar.png",
     },
     {
       projectName: "Singapore Workers Party Website",
@@ -28,8 +35,7 @@ export default function Projects() {
       description:
         "spearheaded the web development of one of singapore's biggest party website as the project lead, guiding a dynamic team of 3 through a streamlined webflow-powered creation process. i managed to wrangle web design faster than a politician manages talking points - and with significantly less spin",
       link: "https://www.wp.sg/",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image: "https://i.postimg.cc/6508kZXp/twp.png",
     },
     {
       projectName: "tukarmainan",
@@ -50,13 +56,14 @@ export default function Projects() {
       description:
         "my idea has been chosen by the instructor to be developed. comes from a true anxiety of a father like me, the toys that my son play with are too many. this application is designed to solve a problem where we can exchange the toys with another person's. the most absurd thing i did was to search where to give talkjs's style. turns out the setting is in their web app, not the library itself -_-",
       link: "https://github.com/TukarMainan",
-      image: "",
+      image:
+        "https://i.postimg.cc/8cC8YfrT/Screenshot-2024-12-08-at-01-33-29.png",
     },
   ];
 
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-12">
         <h1 className="text-xl font-bold mb-2">My projects</h1>
         <div className="grid grid-cols-1 gap-3 ">
           {projectList.map((project, index) => (
@@ -76,6 +83,7 @@ export default function Projects() {
                     </Badge>
                   ))}
                 </div>
+                {/* <ImageCard imageUrl={project.image} /> */}
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
               <CardFooter>

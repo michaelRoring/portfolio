@@ -119,14 +119,3 @@ h3 {
     background-size: 50px 50px;
   }
 }
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
