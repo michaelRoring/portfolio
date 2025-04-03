@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div className="dotted-background">
-        <div className="h-auto dotted-background px-6 py-12 md:max-w-2xl mx-auto">
+        <div className="relative h-auto dotted-background px-6 py-12 md:max-w-2xl mx-auto">
           <Hero />
           <About />
           <WorkExperience />

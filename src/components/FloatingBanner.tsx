@@ -25,7 +25,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DiscordIcon } from "./ui/discord";
 import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/hooks/use-toast";
@@ -33,6 +33,10 @@ import { useToast } from "@/hooks/use-toast";
 export default function FloatingBanner() {
   const router = useRouter();
   const { toast } = useToast();
+  const [dynamicStyle, setDynamicStyle] = useState<React.CSSProperties>({
+    left: "50%",
+    transform: "translateX(-50%)",
+  });
 
   const [data, setData] = useState({
     email: "",
@@ -87,9 +91,32 @@ export default function FloatingBanner() {
     }
   };
 
+  useEffect(() => {
+    const calculatePosition = () => {
+      const viewportWidth = window.innerWidth;
+      const contentMaxWidthPixels = 672;
+      const desiredOverlapPixels = 48;
+
+      if (viewportWidth > contentMaxWidthPixels) {
+        const spaceOutside = (viewportWidth - contentMaxWidthPixels) / 2;
+        const calculatedRight = spaceOutside - desiredOverlapPixels;
+        // Set style for larger screens (right offset)
+        setDynamicStyle({ right: `${Math.max(16, calculatedRight)}px` });
+      } else {
+        // Set style for smaller screens (centered)
+        setDynamicStyle({ left: "50%", transform: "translateX(-50%)" });
+      }
+    };
+
+    calculatePosition();
+    window.addEventListener("resize", calculatePosition);
+
+    return () => window.removeEventListener("resize", calculatePosition);
+  }, []);
+
   return (
     <>
-      <div className="fixed bottom-2 left-1/2 -translate-x-1/2  md:left-auto md:right-4 z-50">
+      <div className="fixed bottom-4 z-50" style={dynamicStyle}>
         <Alert className="bg-zinc-100 rounded-3xl p-2">
           <AlertDescription>
             <div className="flex flex-row md:flex-col gap-3">
