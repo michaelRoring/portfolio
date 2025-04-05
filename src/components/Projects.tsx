@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,6 +18,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useRouter } from "next/navigation";
+import { GithubIcon } from "./ui/github";
 
 export default function Projects() {
   const projectList = [
@@ -24,7 +28,7 @@ export default function Projects() {
       role: "Project lead, full stack web developer",
       stacks: ["Next.js", "Typescript", "Supabase", "Tailwind", "Shadcn UI"],
       description:
-        "led the full-stack development of leader's hangar as project lead, orchestrating a three-person team using next.js, supabase, and supabase auth to create a robust web application. i piloted this project like a software engineer pilots a drone - with precision, a touch of swagger, and hopefully fewer unexpected crashes!",
+        "Led a three-person team in the full-stack development of Leaders Hangar, a web application designed to business owners and leaders to upscale their skill in marketing technology. Utilized Next.js for the frontend and Supabase for the backend database and user authentication, overseeing the project from conception to deployment.",
       link: "https://leaders-hangar.vercel.app",
       image: "https://i.postimg.cc/9XyRBSgT/leaders-hangar.png",
     },
@@ -33,12 +37,12 @@ export default function Projects() {
       role: "Project manager",
       stacks: ["Webflow", "Webflow CMS", "Figma"],
       description:
-        "spearheaded the web development of one of singapore's biggest party website as the project lead, guiding a dynamic team of 3 through a streamlined webflow-powered creation process. i managed to wrangle web design faster than a politician manages talking points - and with significantly less spin",
+        "As Project Manager, I oversaw the website development for the Workers' Party of Singapore. I guided a team of three through a streamlined creation process using Webflow, ensuring efficient collaboration and timely project completion.",
       link: "https://www.wp.sg/",
       image: "https://i.postimg.cc/6508kZXp/twp.png",
     },
     {
-      projectName: "tukarmainan",
+      projectName: "Tukarmainan",
       role: "Frontend & mobile developer",
       stacks: [
         "React Native",
@@ -54,12 +58,18 @@ export default function Projects() {
         "TalkJS",
       ],
       description:
-        "my idea has been chosen by the instructor to be developed. comes from a true anxiety of a father like me, the toys that my son play with are too many. this application is designed to solve a problem where we can exchange the toys with another person's. the most absurd thing i did was to search where to give talkjs's style. turns out the setting is in their web app, not the library itself -_-",
-      link: "https://github.com/TukarMainan",
+        "Developed the frontend for Tukarmainan, a mobile/web application designed to help parents exchange children's toys, addressing the common issue of toy clutter. My concept for this project was selected for development during my course/program. Key responsibilities included building the user interface and integrating features like realtime chat using TalkJs and the transactions.",
+      github: "https://github.com/TukarMainan",
       image:
         "https://i.postimg.cc/8cC8YfrT/Screenshot-2024-12-08-at-01-33-29.png",
     },
   ];
+
+  const router = useRouter();
+  const handleLinkClick = (link: string | undefined) => {
+    if (!link) return;
+    router.push(link);
+  };
 
   return (
     <>
@@ -83,11 +93,23 @@ export default function Projects() {
                     </Badge>
                   ))}
                 </div>
-                {/* <ImageCard imageUrl={project.image} /> */}
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
-              <CardFooter>
-                <Button variant="neutral">View</Button>
+              <CardFooter className="flex gap-3">
+                <Button
+                  variant="neutral"
+                  className={project.link ? "" : "hidden"}
+                  onClick={() => handleLinkClick(project.link)}
+                >
+                  View project
+                </Button>
+                <Button
+                  variant="neutral"
+                  className={project.github ? "bg-zinc-400" : "hidden"}
+                  onClick={() => handleLinkClick(project.github)}
+                >
+                  <GithubIcon />
+                </Button>
               </CardFooter>
             </Card>
           ))}

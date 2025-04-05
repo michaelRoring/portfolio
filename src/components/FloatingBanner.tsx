@@ -35,7 +35,7 @@ export default function FloatingBanner() {
   const { toast } = useToast();
   const [dynamicStyle, setDynamicStyle] = useState<React.CSSProperties>({
     left: "50%",
-    transform: "translateX(-50%)",
+    transform: "translateX(-70%)",
   });
 
   const [data, setData] = useState({

@@ -24,7 +24,7 @@ export default function Certification() {
       issuer: "Google / Coursera",
       issueDate: "Jun 2024",
       description:
-        "acquired the google project management certification, gaining profound insights into strategic planning and execution methodologies. discovered that scrum is basically like herding cats, but with more whiteboards and fewer scratches",
+        "Completed the Google Project Management Certificate program, developing skills in project initiation, planning, execution, risk management, and stakeholder communication. Gained proficiency in traditional and Agile (including Scrum) project management methodologies.",
       link: "https://coursera.org/share/75438d1aef99ebeeec5a8326a71f051c",
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -35,7 +35,7 @@ export default function Certification() {
       issuer: "Make Academy",
       issueDate: "Jan 2024",
       description:
-        "completed the make academy intermediate certificate, mastering no-code automation techniques that transform complex workflows into streamlined digital symphonies. learned to connect apps faster than a tech-savvy octopus juggling communication platforms",
+        "Successfully completed the Make Intermediate program through Make Academy. Acquired advanced capabilities in leveraging Make's no-code platform to optimize business processes, automate repetitive tasks, and create sophisticated integrations between web applications.",
       link: "https://www.credly.com/badges/bfe1c647-a5e8-4f7a-b1dd-2e0ab3ffb1b4/public_url",
     },
     {
@@ -43,7 +43,7 @@ export default function Certification() {
       issuer: "Solana Academy",
       issueDate: "Aug 2023",
       description:
-        "a mini bootcamp for me to learn blockchain technology. met a lot of people across the nation as cohorts, and it was a great experience. still haven't mastered the basics of blockchain, but i'm still learning..",
+        "Completed an introductory program focused on Solana blockchain development. Gained foundational knowledge of Solana's architecture, core concepts (like Proof-of-History), and the basics of building on the Solana network.",
       link: "https://drive.google.com/file/d/1gA0oFiPv1Ec9spZzMdz0Vn5om-huiEZz/view",
     },
     {
@@ -51,7 +51,7 @@ export default function Certification() {
       issuer: "Hacktiv8",
       issueDate: "May 2023",
       description:
-        "conquered the full stack javascript immersive bootcamp, transforming from a old brain programmer to a javascript juggler who can navigate both frontend and backend landscapes with newfound confidence. survived the learning curve that's steeper than a roller coaster designed by caffeine-fueled programmers - and made some awesome friends along the way",
+        "Successfully completed this rigorous immersive program, gaining proficiency across the full JavaScript stack for modern web development. Acquired hands-on experience in building and deploying applications using contemporary frontend and backend frameworks and tools.",
       link: "https://i.postimg.cc/DwnzMCNN/Hacktiv8-Certificate.png",
     },
 
@@ -60,7 +60,7 @@ export default function Certification() {
       issuer: "English First",
       issueDate: "Jun 2023",
       description:
-        "earned an ef set english certificate with a solid c1 advanced level score of 63/100, demonstrating strong linguistic versatility crucial for effective communication in Singapore's multicultural professional landscape. proved that my english skills are smoother than a well-oiled diplomatic translator navigating a multilingual cocktail party",
+        "Achieved a C1 Advanced level (Score: 63/100) on the EF SET, demonstrating high proficiency in English suitable for professional and academic environments.",
       link: "https://www.efset.org/cert/66LP9c",
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
