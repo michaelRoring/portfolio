@@ -76,7 +76,7 @@ export default function Certification() {
             <div className="" key={index}>
               <Card
                 key={index}
-                className="bg-zinc-300 hover:bg-lime-400 cursor-pointer"
+                className="bg-zinc-200 hover:bg-lime-400 cursor-pointer"
               >
                 <CardHeader>
                   <CardTitle>{certification.name}</CardTitle>
