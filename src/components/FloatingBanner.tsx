@@ -38,6 +38,8 @@ export default function FloatingBanner() {
     transform: "translateX(-70%)",
   });
 
+  const [isSheetOpen, setSheetOpen] = useState(false);
+
   const [data, setData] = useState({
     email: "",
     message: "",
@@ -57,35 +59,64 @@ export default function FloatingBanner() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     console.log("Form submitted with data:", data);
 
-    setData({
-      email: "",
-      message: "",
-    });
-
-    const response = await fetch(
-      "https://hook.us1.make.com/463guwh9vqezrv8odgt356kll7fsn6io",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          message: data.message,
-        }),
+    try {
+      if (!data.email || !data.message) {
+        console.log("Missing fields");
+        throw new Error("Please fill in all fields");
       }
-    );
 
-    if (response.ok) {
-      console.log("Message sent successfully");
+      setData({
+        email: "",
+        message: "",
+      });
+
+      const response = await fetch(
+        "https://hook.us1.make.com/463guwh9vqezrv8odgt356kll7fsn6io",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: data.email,
+            message: data.message,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        console.log("Message sent successfully");
+
+        toast({
+          title: "Message Sent",
+          description: "Thanks for reaching out! I'll get back to you soon.",
+          action: <ToastAction altText="Close notification">Close</ToastAction>,
+        });
+        setSheetOpen(false);
+      }
+    } catch (error) {
+      console.error(error);
+
+      let toastTitle = "Submission Failed";
+      let toastDescription = "An unexpected error occurred. Please try again.";
+
+      if (error instanceof Error) {
+        if (error.message === "Please fill in all fields") {
+          toastTitle = "Missing Information";
+          toastDescription = error.message;
+        } else {
+          toastDescription = `An error occurred: ${error.message}`;
+        }
+      } else {
+        toastDescription = "An unknown error occurred.";
+      }
 
       toast({
-        title: "Message Sent",
-        description: "Thanks for reaching out! I'll get back to you soon.",
+        title: toastTitle,
+        description: toastDescription,
         action: <ToastAction altText="Close notification">Close</ToastAction>,
       });
     }
@@ -100,10 +131,8 @@ export default function FloatingBanner() {
       if (viewportWidth > contentMaxWidthPixels) {
         const spaceOutside = (viewportWidth - contentMaxWidthPixels) / 2;
         const calculatedRight = spaceOutside - desiredOverlapPixels;
-        // Set style for larger screens (right offset)
         setDynamicStyle({ right: `${Math.max(16, calculatedRight)}px` });
       } else {
-        // Set style for smaller screens (centered)
         setDynamicStyle({ left: "50%", transform: "translateX(-50%)" });
       }
     };
@@ -148,7 +177,8 @@ export default function FloatingBanner() {
               >
                 <DiscordIcon />
               </Button>
-              <Sheet>
+              {/* Control Sheet open state */}
+              <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -164,7 +194,7 @@ export default function FloatingBanner() {
                   </Tooltip>
                 </TooltipProvider>
                 <SheetContent className="bg-zinc-200 rounded-tl-xl rounded-bl-xl">
-                  <form onSubmit={handleSubmit}>
+                  <form>
                     <SheetHeader>
                       <SheetTitle>Send message</SheetTitle>
                       <SheetDescription>
@@ -201,14 +231,13 @@ export default function FloatingBanner() {
                       </div>
                     </div>
                     <SheetFooter>
-                      <SheetClose asChild>
-                        <Button
-                          type="submit"
-                          className="bg-white hover:bg-yellow-300"
-                        >
-                          Send Message
-                        </Button>
-                      </SheetClose>
+                      <Button
+                        type="button"
+                        className="bg-white hover:bg-yellow-300"
+                        onClick={handleSubmit}
+                      >
+                        Send Message
+                      </Button>
                     </SheetFooter>
                   </form>
                 </SheetContent>
