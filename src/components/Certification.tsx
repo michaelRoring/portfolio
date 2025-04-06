@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { useRouter } from "next/navigation";
 
 export default function Certification() {
   const certificationList = [
@@ -67,6 +70,12 @@ export default function Certification() {
     },
   ];
 
+  const router = useRouter();
+
+  const handleClick = (link: string) => {
+    router.push(link);
+  };
+
   return (
     <>
       <div className="mt-12">
@@ -89,7 +98,12 @@ export default function Certification() {
                   <CardDescription>{certification.description}</CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="neutral">View</Button>
+                  <Button
+                    variant="neutral"
+                    onClick={() => handleClick(certification.link)}
+                  >
+                    View
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
