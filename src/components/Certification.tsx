@@ -19,7 +19,7 @@ export default function Certification() {
       issuer: "Mandala Blokchain Academy",
       issueDate: "Mar 2025",
       description:
-        "acquired the google project management certification, gaining profound insights into strategic planning and execution methodologies. discovered that scrum is basically like herding cats, but with more whiteboards and fewer scratches",
+        "Completed the basic of the EVM and Solidity programming language. Gained proficiency in smart contract development and deployment.",
       link: "https://drive.google.com/file/d/1lDQSSSe4eihjuDjbuEz1rJbaLAd8udO_/view?usp=sharing",
     },
     {
