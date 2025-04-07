@@ -14,7 +14,9 @@ export default function Education() {
       educatorName: "Hacktiv8",
       title: "Immersive full stack javascript bootcamp",
       grade: "87.6 / 100",
-      timeline: "Jan 2022 - Apr 2022",
+      timeline: "Jan 2023 - Apr 2023",
+      enterDate: "Jan 2023",
+      graduationDate: "Apr 2023",
       certificateLink:
         "https://drive.google.com/file/d/1GzV2Tu3T2mRbfuIHOnbB1ZduhDZOIbnk/view?usp=sharing",
     },
@@ -23,6 +25,8 @@ export default function Education() {
       title: "Information technology",
       grade: "3.34 / 4.00",
       timeline: "Jul 2010 - Jun 2014",
+      enterDate: "Jul 2010",
+      graduationDate: "Jun 2014",
     },
   ];
 
@@ -47,7 +51,12 @@ export default function Education() {
                   value="item-1"
                 >
                   <AccordionTrigger className="bg-zinc-200 hover:bg-blue-300">
-                    {education.educatorName}
+                    <div className="flex">
+                      <div>{education.educatorName} /</div>
+                      <div className="font-light">
+                        &nbsp; {education.graduationDate}
+                      </div>
+                    </div>
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="grid grid-cols-1">
