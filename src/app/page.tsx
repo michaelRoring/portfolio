@@ -11,8 +11,11 @@ import FloatingBanner from "@/components/FloatingBanner";
 import SvgComponent from "@/components/atom/NotiolyIcon";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Michael's portfolio",
   description: "Home page of my portfolio",
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/ico" }],
+  },
 };
 
 export default function Home() {

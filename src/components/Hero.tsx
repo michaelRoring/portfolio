@@ -12,7 +12,7 @@ export default function Hero() {
         <img
           src="/images/profile.png"
           alt="Michael"
-          className="rounded-3xl border-2 border-b-8 border-r-8 border-border  shadow-shadow w-36 h-36 object-cover"
+          className="rounded-3xl border-b-4 border-r-4 border-border  shadow-shadow w-36 h-36 object-cover"
         />
       </div>
     </div>
