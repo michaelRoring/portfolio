@@ -24,6 +24,14 @@ import { GithubIcon } from "./ui/github";
 export default function Projects() {
   const projectList = [
     {
+      projectName: "Voting Dapp - Solana",
+      role: "Full stack blockchain developer",
+      stacks: ["Rust", "Anchor", "Solana", "Next.js"],
+      description:
+        "I built a voting dapp on Solana using Anchor and Next.js. I also tried to use with the Blink SDK to create a unique user interface for user to vote on the candidates.",
+      github: "https://github.com/michaelRoring/voting-dapp-solana",
+    },
+    {
       projectName: "Leaders Hangar",
       role: "Project lead, full stack web developer",
       stacks: ["Next.js", "Typescript", "Supabase", "Tailwind", "Shadcn UI"],

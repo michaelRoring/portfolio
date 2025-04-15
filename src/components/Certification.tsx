@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { MoveUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function Certification() {
